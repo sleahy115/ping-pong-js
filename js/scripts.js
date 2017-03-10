@@ -1,4 +1,8 @@
-function pingPong(number) {
+function Calculator (skin){
+    this.skin = skinName();
+}
+
+Calculator.prototype.pingPong = function(number) {
     var output = [];
     for (var i = 1; i <= number; i++) {
         if (i % 15 === 0) {
@@ -12,17 +16,6 @@ function pingPong(number) {
         }
     }
     return output;
-
 }
 
-
-$(document).ready(function() {
-    $('.ping-pong').submit(function(event) {
-        event.preventDefault();
-        var number = $("#number").val();
-        var output = pingPong(number);
-        output.forEach(function(element) {
-            $('#solution').append("<li>" + element + "</li>");
-        });
-    });
-});
+exports.calculatorModule = Calculator;
