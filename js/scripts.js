@@ -16,6 +16,6 @@ Calculator.prototype.pingPong = function(number) {
         }
     }
     return output;
-}
+};
 
 exports.calculatorModule = Calculator;
